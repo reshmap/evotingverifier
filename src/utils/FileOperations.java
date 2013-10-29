@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 
 public class FileOperations {
-	public static Object loadCollectorBullettinBoard(String filename) throws ClassNotFoundException, IOException{
+	public static Object loadMap(String filename) throws ClassNotFoundException, IOException{
 		Object result = null;
 		FileInputStream fileIn = new FileInputStream(filename);
 		ObjectInputStream in = new ObjectInputStream(fileIn);
