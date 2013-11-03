@@ -37,7 +37,9 @@ public class Main {
 			System.out.println("Enter Your Vote");
 			int vote=Integer.parseInt(reader.readLine());
 			Key key=pvidToKeyMap.get(PVID);
-			
+			if(!collectorBullettinBoard.containsKey(PVID))
+				System.out.println("You have not voted");
+			else
 			if(Arrays.equals(collectorBullettinBoard.get(PVID), Essentials.hashOf(encryptVote(key,vote))))
 				System.out.println("Your Vote has been recorded correctly");
 			else
